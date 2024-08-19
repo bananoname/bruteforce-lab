@@ -3,6 +3,7 @@
 ![image](https://github.com/user-attachments/assets/62a26e5a-691d-45a6-b9fd-a084476ff4d4)
 
 - Để cập nhật dự án của bạn nhằm khắc phục các lỗi về phiên bản Docker Compose và lỗi liên quan đến việc thay đổi mật khẩu của người dùng testuser, bạn cần thực hiện các bước sau:
+
 **1. Cập nhật tệp docker-compose.yml**
 - Đảm bảo rằng máy chủ của bạn đã cài đặt **docker-compose**. Nếu các bạn chưa các bạn có thể tham khảo cách cài đặt: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04.
 - Sau khi các bạn đã cài đặt máy chủ của mình các bạn cần kiểm tra bằng cách:
