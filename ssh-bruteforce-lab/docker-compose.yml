@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  ssh-server:
+    build: ./ssh-server
+    container_name: ssh-server
+    ports:
+      - "22:22"
+    volumes:
+      - ssh-data:/var/lib/ssh
+    tty: true
+
+  hydra-attacker:
+    build: ./hydra-attacker
+    container_name: hydra-attacker1
+    depends_on:
+      - ssh-server
+    tty: true
+    entrypoint: /bin/bash
+
+volumes:
+  ssh-data:
