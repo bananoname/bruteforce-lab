@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  ftp-server:
+    build: ./ftp-server
+    container_name: ftp-server
+    ports:
+      - "21:21"
+    volumes:
+      - ftp-data:/var/lib/ftp
+    tty: true
+
+  hydra-attacker:
+    build: ./hydra-attacker
+    container_name: hydra-attacker
+    depends_on:
+      - ftp-server
+    tty: true
+    entrypoint: /bin/bash
+
+volumes:
+  ftp-data:
+
